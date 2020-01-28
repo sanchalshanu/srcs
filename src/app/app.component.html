@@ -1,0 +1,24 @@
+<div class="container">
+  <table class="table table-bordered">
+    <tr class="bg-primary">
+      <th>Book ID</th>
+      <th>Book Title</th>
+      <th>Book Author</th>
+      <th>Book Publish Year</th>
+    </tr>
+    <tr>
+      <th><input type="text" [(ngModule)]="term1" placeholder="Search by Id"></th>
+      <th><input type="text" [(ngModule)]="term2" placeholder="Search by Name"></th>
+
+      <th><input type="text" [(ngModule)]="term3" placeholder="Search by Author"></th>
+      <th><input type="text" [(ngModule)]="term4" placeholder="Search by Year"></th>
+
+    </tr>
+    <tr *ngFor="let book of booksData | filter:term1 |filter:term2 |filter:term3 |">
+      <td>{{book.id}}</td>
+      <td>{{book.title</td>
+        <td>{{book.author}}</td>
+        <td>{{book.year}}</td>
+    </tr>
+  </table>
+</div>
